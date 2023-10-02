@@ -1,0 +1,82 @@
+body {
+  margin: 40px 0;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #BCAAA4;
+  -webkit-font-smoothing: antialiased;
+}
+
+*{margin:0; padding: 0; box-sizing: border-box;}
+
+.content{display:flex; margin: auto;}
+
+.rTable{width: 100%; text-align: center;}
+  .rTable thead{background: black; font-weight: bold; color:#fff;}
+  .rTable tbody tr:nth-child(2n){background: #ccc;}
+  .rTable th , .rTable td{padding: 7px 0;}
+
+@media screen and (max-width: 480px){
+  .content{width: 94%;}
+
+  .rTable thead{display:none;}
+  .rTable tbody td{display: flex; flex-direction: column; }
+}
+
+@media only screen and (min-width: 1200px){
+  .content{width:100%;}
+  .rTable tbody tr td:nth-child(1){width:10%;}
+  .rTable tbody tr td:nth-child(2){width:30%;}
+  .rTable tbody tr td:nth-child(3){width:20%;}
+  .rTable tbody tr td:nth-child(4){width:10%;}
+  .rTable tbody tr td:nth-child(5){width:30%;}
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+  padding: 1em;
+}
+
+form {
+  border: 1px solid whitesmoke;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+
+form input, form button {
+  font-size: 1.2em;
+  border-radius: 0.2em;
+  border: none;
+  padding: 0.2em;
+}
+
+form button {
+  cursor: pointer;
+  background: none;
+  color: whitesmoke;
+}
+
+form button:hover {
+  background-color: whitesmoke;
+  color: blueviolet;
+}
+#searchbar{
+  margin-left: 15%;
+  padding:15px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+   width: 30%;
+   -webkit-transition: width 0.15s ease-in-out;
+   transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+     change its width to 100% */
+input[type=text]:focus {
+  width: 70%;
+}
